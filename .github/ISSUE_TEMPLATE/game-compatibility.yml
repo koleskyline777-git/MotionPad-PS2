@@ -1,0 +1,50 @@
+name: PS2 / PCSX2 game compatibility
+description: Report a working or unsupported game with MotionPad
+labels: [compatibility]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing MotionPad! Please do not upload copyrighted game files, BIOS images, or other commercial assets.
+  - type: input
+    id: game
+    attributes:
+      label: Game title
+      placeholder: "Gran Turismo 4"
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Region, game ID and/or version
+      placeholder: "PAL / NTSC / mod version"
+    validations:
+      required: false
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform tested
+      options: [Real PS2, PCSX2 on Windows, Other Windows game]
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options: [Working, Partially working, Not working, Not sure]
+    validations:
+      required: true
+  - type: textarea
+    id: controls
+    attributes:
+      label: Steering, throttle, brake and controller behavior
+      description: Which inputs work? What fails or is delayed?
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Setup details and steps to reproduce
+      description: PS2 model or PCSX2 version, USB tethering, ports, game settings, etc.
+    validations:
+      required: false
