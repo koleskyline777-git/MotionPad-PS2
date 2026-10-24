@@ -1,0 +1,30 @@
+name: MotionPad bug report
+description: Report a technical issue with the PS2 ELF, Android connection, or Windows Receiver
+labels: [bug]
+body:
+  - type: input
+    id: component
+    attributes:
+      label: Component and version
+      placeholder: "PS2 ELF v1.0"
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we reproduce it?
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Environment / hardware
+      description: PS2 model, Windows version, PCSX2 version, phone model, cable and connection settings
+    validations:
+      required: false
